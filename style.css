@@ -1,0 +1,42 @@
+body{
+    background-color: #f8fafe;
+}
+.container{
+    background-color:#920cc8;
+    border: 5px solid #2d2f5a;
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+span{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+span,span::before,span::after{
+    width: 35px; height: 2px;
+    background-color: #ebe1fa;
+    transition: all 0.3s;
+}
+span::before,span::after{
+    position: absolute;
+    content: "";
+}
+span::before{
+    transform: translateY(-10px);
+}
+span::after{
+    transform: translateY(10px);
+}
+.container:hover span{
+    background-color: transparent;
+}
+.container:hover span::before{
+      transform: rotate(135deg);
+}
+.container:hover span::after{
+      transform: rotate(-135deg);
+}
